@@ -271,8 +271,8 @@ admitted declarations.
 
 The two central metatheorems in `ObservationalBisimulation.fst` are
 **axiomatized here with `admit ()`**, because they are mechanically proven in
-the companion Lean development (`doppel_metatheory`, distributed
-alongside this repository in the paper's artifact).
+the companion Lean development
+[Doppel Metatheory](https://github.com/cuplv/doppel-metatheory).
 Each `admit ()` is an instance of the corresponding Lean theorem: the F\*
 statements match the Lean ones in strength, so that the `admit ()`s are
 genuinely justified by the Lean proofs (e.g. `t_preorder` is the effects-based
