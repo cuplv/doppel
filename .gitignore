@@ -1,0 +1,10 @@
+.DS_Store
+*~
+*.hints
+.depend
+_cache
+_output
+_opam
+.cache
+.vscode
+*.checked

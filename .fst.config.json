@@ -1,0 +1,12 @@
+{
+    "fstar_exe": "fstar.exe",
+    "options": [
+        "--cache_dir",
+        ".cache"
+    ],
+    "include_dirs": [
+        "examples/secure_message_delivery",
+        "examples/nsl_mutual_authentication",
+        "helpers"
+    ]
+}
