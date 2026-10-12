@@ -46,7 +46,7 @@ recommend the pinned versions.
 
 | Tool | Version | Notes |
 |---|---|---|
-| F\* | `2026.05.31~dev`, git commit [`8a87a91f756d45b2e805cdba40e76b3eeda5377f`](https://github.com/FStarLang/FStar/commit/8a87a91f756d45b2e805cdba40e76b3eeda5377f) | installed with opam |
+| F\* | release tag [`v2026.05.31`](https://github.com/FStarLang/FStar/releases/tag/v2026.05.31) (`fstar.exe --version` reports `2026.05.31~dev`, commit `097bda35`) | installed with opam |
 | Z3 | 4.13.3 | the version F\* expects; must be on `PATH` as `z3` |
 | OCaml | 5.4.1 | only needed to build F\* |
 | opam | ≥ 2.1 (tested with 2.5.1) | |
@@ -64,17 +64,17 @@ opam init --bare -n            # only if opam has never been initialized
 opam switch create doppel ocaml-base-compiler.5.4.1
 eval $(opam env --switch=doppel)
 
-# 2. Install Z3 4.13.3 and F* at the pinned commit
+# 2. Install Z3 4.13.3 and F* at the pinned release tag
 #    (builds OCaml dependencies and F* from source: ~15 min on a multi-core machine)
 opam install z3.4.13.3
-opam pin add fstar "git+https://github.com/FStarLang/FStar#8a87a91f756d45b2e805cdba40e76b3eeda5377f"
+opam pin add fstar "git+https://github.com/FStarLang/FStar#v2026.05.31"
 
 # 3. Check the versions
-fstar.exe --version   # F* 2026.05.31~dev ... commit=8a87a91f...
+fstar.exe --version   # F* 2026.05.31~dev ... commit=097bda35...
 z3 --version          # Z3 version 4.13.3 - 64 bit
 ```
 
-Alternatively, if you already have a build of F\* at that commit, set
+Alternatively, if you already have a build of F\* at that tag, set
 `FSTAR_HOME` to its root: the Makefile then uses `$FSTAR_HOME/bin/fstar.exe`.
 
 ### Building and checking
